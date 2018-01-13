@@ -887,6 +887,8 @@
       });
 
       it('should use recursion by calling self', function() {
+        //Not correct test for those who might want to check strings from end
+        //SHOULD BE: compareStr('hoses', 'houses');
         compareStr('house', 'houses');
         expect(compareStr.callCount).to.be.above(1);
       });
@@ -1461,7 +1463,8 @@
       });
 
       it('should use recursion by calling self', function() {
-        nthFibo(5);
+        //nthFibo(5): Wrong test for someone who uses memoization
+        nthFibo(9);
         expect(nthFibo.callCount).to.be.above(1);
       });
 
